@@ -33,16 +33,16 @@ Com `java.nio`, não é necessário se preocupar com o fechamento manual de arqu
 
 A classe `File` implementa diversas interfaces e fornece métodos úteis:
 
-- `exists()`
-- `isFile()`
-- `isDirectory()`
-- `getName()`
-- `getPath()`
-- `delete()`
-- `list()`
-- `mkdir()`
-- `length()`
-- `canRead()`, `canWrite()`, `canExecute()`
+- `exists()` - Verifica se o arquivo ou diretório existe.
+- `isFile()` - Verifica se é um arquivo.
+- `isDirectory()` - Verifica se é um diretório.
+- `getName()` - Retorna o nome do arquivo ou diretório.
+- `getPath()` - Retorna o caminho do arquivo ou diretório em formato string.
+- `delete()` - Deleta o arquivo ou diretório.
+- `list()` - Retorna um array com os nomes de arquivos e diretórios no diretório.
+- `mkdir()` - Cria um diretório.
+- `length()` - Retorna o tamanho do arquivo em bytes.
+- `canRead()`, `canWrite()`, `canExecute()` - Verifica permissões de leitura, escrita e execução, respectivamente.
 
 ---
 
@@ -58,20 +58,20 @@ Path path = Paths.get("caminho/do/arquivo.txt");
 
 ### Métodos úteis da interface `Path`
 
-- `toString()`
-- `getFileName()`
-- `getParent()`
-- `getRoot()`
-- `resolve(String other)`
-- `relativize(Path other)`
-- `normalize()`
-- `toAbsolutePath()`
-- `toRealPath()`
-- `startsWith(Path other)`
-- `endsWith(Path other)`
-- `subpath(int beginIndex, int endIndex)`
-- `compareTo(Path other)`
-- `equals(Object other)`
+- `toString()` – Retorna o caminho como String.
+- `getFileName()` – Retorna o nome do arquivo.
+- `getParent()` – Retorna o caminho pai.
+- `getRoot()` – Retorna o root do caminho (ex: / (linux) ou C:\ (windows)).
+- `resolve(String other)` – Anexa outro caminho.
+- `relativize(Path other)` – Calcula o caminho relativo entre dois Path.
+- `normalize()` – Remove . e .. do caminho.
+- `toAbsolutePath()` – Converte para caminho absoluto.
+- `toRealPath()` – Retorna o caminho real (resolvendo links simbólicos).
+- `startsWith(Path other)`– Verifica início.
+- `endsWith(Path other)` – Verifica fim.
+- `subpath(int beginIndex, int endIndex)`  – Retorna parte do caminho.
+- `compareTo(Path other)` – Compara dois caminhos.
+- `equals(Object other)` – Compara se são iguais.
 
 ---
 
@@ -79,18 +79,18 @@ Path path = Paths.get("caminho/do/arquivo.txt");
 
 Classe final muito útil para manipulação de arquivos e diretórios:
 
-- `exists(Path)`
-- `delete(Path)`
-- `copy(Path, Path)`
-- `move(Path, Path)`
-- `readAllBytes(Path)`
-- `readAllLines(Path)`
-- `write(Path, byte[] ou List<String>)`
-- `createFile(Path)`
-- `createDirectory(Path)`
-- `walk(Path)`
-- `isDirectory(Path)` / `isRegularFile(Path)`
-- `list(Path)`
+- `exists(Path)` – Verifica se o arquivo existe.
+- `delete(Path)` – Deleta arquivo ou diretório.
+- `copy(Path, Path)` – Copia arquivos.
+- `move(Path, Path)` – Move ou renomeia.
+- `readAllBytes(Path)` – Lê todo o conteúdo como byte[].
+- `readAllLines(Path)` – Lê todas as linhas como List<String>.
+- `write(Path, byte[] ou List<String>)` – Escreve conteúdo no arquivo.
+- `createFile(Path)` – Cria um novo arquivo.
+- `createDirectory(Path)` – Cria diretório.
+- `walk(Path)` – Percorre diretórios recursivamente (stream).
+- `isDirectory(Path)` / `isRegularFile(Path)` – Verificações de tipo.
+- `list(Path)` – Lista arquivos de um diretório (não recursivo).
 
 ---
 
