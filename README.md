@@ -186,7 +186,7 @@ Path caminho = Path.of(ARQUIVO_LOCAL);
 
 ## Links de Referência do Projeto:
 
-- Classe `App.java` **(Principal)**: https://github.com/deisesalless/java-nio-arquivos/blob/main/src/main/java/br/utfpr/deisesalless/App.java
+- Classe `App.java` **(Principal)**: https://github.com/deisesalless/java-nio-arquivos/blob/main/src/main/java/br/utfpr/deisesales/App.java
     - Este arquivo contém a lógica principal e invoca os métodos de leitura, escrita de arquivo TXT e escrita de várias linhas.
-- Classe `Arquivo.java` **(Utilitários)**: https://github.com/deisesalless/java-nio-arquivos/blob/main/src/main/java/br/utfpr/deisesalless/Arquivo.java
+- Classe `Arquivo.java` **(Utilitários)**: https://github.com/deisesalless/java-nio-arquivos/blob/main/src/main/java/br/utfpr/deisesales/Arquivo.java
     - Contém a implementação dos métodos utilitários para manipulação de arquivos.
